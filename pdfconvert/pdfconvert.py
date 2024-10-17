@@ -15,7 +15,7 @@ class PDFConverter:
             'merge': self.merge_pdfs,
             'split': self.split_pdf,
             'pdf2docx': self.pdf_to_docx,
-            'delete_pages': self.delete_pages  # 新しく追加
+            'delete_pages': self.delete_pages
         }
 
     def pdf_to_image(self, input_path, output_path):
@@ -66,7 +66,6 @@ class PDFConverter:
         cv.close()
         print(f"Converted {input_path} to DOCX: {output_path}")
 
-    # 新しく追加された関数
     def delete_pages(self, input_path, output_path, pages_to_delete):
         with open(input_path, 'rb') as file:
             reader = PyPDF2.PdfReader(file)
